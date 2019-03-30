@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Caesar cipher</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="tabs-container">
+        <button class="tablink active" data-tab="encription">
+          encription
+        </button>
+        <button class="tablink" data-tab="decryption">
+          decryption
+        </button>
+      </div>
+      <div class="tabcontent visible" data-tab="encription">
+        <label for="encriptionKey">Key: </label>
+        <select name="" id="encriptionKey">
+          <option value="1">ROT1</option>
+          <option value="2">ROT2</option>
+          <option value="3">ROT3</option>
+        </select>
+        <br />
+        <input type="text" id="encriptionValue" />
+        <br />
+        <button class="btn-submit" id="encriptionSubmit">Encription</button>
+        <div id="output1"></div>
+      </div>
+      <div class="tabcontent hidden" data-tab="decryption">
+        <label for="decryptionKey">Key: </label>
+        <select name="" id="decryptionKey">
+          <option value="1">ROT1</option>
+          <option value="2">ROT2</option>
+          <option value="3">ROT3</option>
+        </select>
+        <br />
+        <input type="text" id="decriptionValue" />
+        <br />
+        <button class="btn-submit" id="decriptionSubmit">Decryption</button>
+        <p id="output2"></p>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
