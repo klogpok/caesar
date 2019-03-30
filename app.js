@@ -18,6 +18,15 @@ const state = {
   currentDecriptionValue: ''
 };
 
+const clear = () => {
+  state.currentEncriptionKey = 1;
+  state.currentDecriptionKey = 1;
+  state.currentEncriptionValue = '';
+  state.currentDecriptionValue = '';
+  encriptionOutput.textContent = '';
+  decriptionOutput.textContent = '';
+};
+
 tabsContainer.addEventListener('click', event => {
   const elClickedTab = event.target;
 
@@ -31,6 +40,8 @@ tabsContainer.addEventListener('click', event => {
         ? tabContent.classList.replace('hidden', 'visible')
         : tabContent.classList.replace('visible', 'hidden');
     });
+
+    clear();
   }
 });
 
@@ -51,7 +62,7 @@ decriptionValue.onchange = event => {
 };
 
 encriptionSubmit.onclick = () => {
-  encriptionOutput.textContent = encrypt(state.currentEncriptionValue, state.currentDecriptionKey);
+  encriptionOutput.textContent = encrypt(state.currentEncriptionValue, state.currentEncriptionKey);
   encriptionValue.value = '';
 };
 
